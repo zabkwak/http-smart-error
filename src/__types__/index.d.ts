@@ -7,6 +7,24 @@ declare module 'http-smart-error' {
         /**
          * Creates HttpError instance by error status code.
          * @param statusCode HTTP status code of the error.
+         */
+        static create(statusCode: number): HttpSmartError;
+        /**
+         * Creates HttpError instance by error status code.
+         * @param statusCode HTTP status code of the error.
+         * @param message Message of the error.
+         */
+        static create(statusCode: number, message: string): HttpSmartError;
+        /**
+         * Creates HttpError instance by error status code.
+         * @param statusCode HTTP status code of the error.
+         * @param message Message of the error.
+         * @param code Code of the error.
+         */
+        static create(statusCode: number, message: string, code: string): HttpSmartError;
+        /**
+         * Creates HttpError instance by error status code.
+         * @param statusCode HTTP status code of the error.
          * @param message Message of the error.
          * @param code Code of the error.
          * @param payload Additional error data.
