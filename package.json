@@ -24,7 +24,7 @@
     "http"
   ],
   "dependencies": {
-    "smart-error": "^1.2.1"
+    "smart-error": "^2.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
