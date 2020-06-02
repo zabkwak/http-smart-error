@@ -23,19 +23,18 @@
 		"error",
 		"http"
 	],
-	"dependencies": {
-		"smart-error": "^3.0.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
-		"@babel/cli": "^7.5.5",
-		"@babel/core": "^7.5.5",
-		"@babel/plugin-proposal-class-properties": "^7.5.5",
-		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-		"@babel/preset-env": "^7.5.5",
-		"@babel/register": "^7.5.5",
+		"@babel/cli": "^7.10.1",
+		"@babel/core": "^7.10.2",
+		"@babel/plugin-proposal-class-properties": "^7.10.1",
+		"@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+		"@babel/preset-env": "^7.10.2",
+		"@babel/register": "^7.10.1",
 		"chai": "^3.5.0",
-		"mocha": "^6.2.0",
-		"run-script-os-fix": "^1.0.4"
+		"mocha": "^6.2.3",
+		"run-script-os-fix": "^1.0.4",
+		"smart-error": "^3.0.0"
 	},
 	"peerDependencies": {
 		"smart-error": "^3.0.0"
