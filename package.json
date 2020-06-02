@@ -1,6 +1,6 @@
 {
 	"name": "http-smart-error",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Subclass of SmartError for handling http errors.",
 	"main": "index.js",
 	"types": "./dist/index.d.ts",
