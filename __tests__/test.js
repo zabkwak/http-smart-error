@@ -45,5 +45,12 @@ describe('HttpError', () => {
         expect(error.code).to.be.equal('ERR_CODE');
         expect(error.statusCode).to.be.equal(400);
         expect(error.field).to.be.equal('some_field');
-    });
+	});
+	
+	it('checks the static codes', () => {
+		expect(HttpError.FORBIDDEN).to.be.equal(403);
+		expect(HttpError.IM_A_TEAPOT).to.be.equal(418);
+		expect(HttpError.NOT_IMPLEMENTED).to.be.equal(501);
+		expect(HttpError.GATEWAY_TIME_OUT).to.be.equal(504);
+	});
 });

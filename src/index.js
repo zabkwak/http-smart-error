@@ -21,13 +21,13 @@ export default class HttpError extends SmartError {
      * @param {string} code Error code.
      * @param {Object.<string, any>} payload Additional error data.
      */
-    static create(statusCode, message = null, code = null, payload = {}) {
-        const c = this.getCode(statusCode);
-        if (message instanceof SmartError) {
-            payload = message._parsePayload(message);
-        }
-        return new this(statusCode, message || c.message, code || c.code, payload);
-    }
+	static create(statusCode, message = null, code = null, payload = {}) {
+		const c = this.getCode(statusCode);
+		if (message instanceof SmartError) {
+			payload = message._parsePayload(message);
+		}
+		return new this(statusCode, message || c.message, code || c.code, payload);
+	}
 
     /**
      * Gets the code info by http error status code.
@@ -35,9 +35,9 @@ export default class HttpError extends SmartError {
      *
      * @returns {CodeInfo}
      */
-    static getCode(statusCode) {
-        return codes[statusCode] || codes[500];
-    }
+	static getCode(statusCode) {
+		return codes[statusCode] || codes[500];
+	}
 
     /**
      * Creates new instance of http error.
@@ -47,7 +47,16 @@ export default class HttpError extends SmartError {
      * @param {string} code Error code.
      * @param {Object.<string, any>} payload Additional error data.
      */
-    constructor(statusCode, message, code, payload = {}) {
-        super(message, code, { ...payload, statusCode });
-    }
+	constructor(statusCode, message, code, payload = {}) {
+		super(message, code, { ...payload, statusCode });
+	}
 }
+
+Object.defineProperties(HttpError, Object.keys(codes).reduce((prev, current, index, a) => {
+	const code = codes[current].code
+		.replace(/-/g, '_')
+		.replace(/'/g, '')
+		.toUpperCase();
+	prev[code] = { value: parseInt(a[index], 10), writable: false };
+	return prev;
+}, {}));
