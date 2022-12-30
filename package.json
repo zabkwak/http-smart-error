@@ -32,7 +32,7 @@
 		"@babel/preset-env": "^7.10.2",
 		"@babel/register": "^7.10.1",
 		"chai": "^3.5.0",
-		"mocha": "^6.2.3",
+		"mocha": "^10.2.0",
 		"run-script-os-fix": "^1.0.4",
 		"smart-error": "^3.0.0"
 	},
